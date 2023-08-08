@@ -11,3 +11,13 @@ function file_improvements_preprocess_file_link(array &$variables): void {
 
   $service->preprocess($variables);
 }
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function file_improvements_theme_registry_alter(array &$themeRegistry) {
+  /** @var \Drupal\file_improvements\HookHandlers\ThemeRegistryAlterHandler $service */
+  $service = \Drupal::service('file_improvements.hook_handlers.theme_registry_alter');
+
+  $service->alter($themeRegistry);
+}

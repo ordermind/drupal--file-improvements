@@ -4,12 +4,21 @@ declare(strict_types=1);
 
 namespace Drupal\file_improvements\HookHandlers\PreprocessHandlers;
 
+use Drupal\Component\Utility\Unicode;
 use Ordermind\DrupalTengstromShared\HookHandlers\PreprocessHandlerInterface;
 
 class PreprocessFileLinkHandler implements PreprocessHandlerInterface {
 
   public function preprocess(array &$variables): void {
-    dump($variables);
+    if (empty($variables['trim'])) {
+      return;
+    }
+
+    if (empty($variables['link']['#title'])) {
+      return;
+    }
+
+    $variables['link']['#title'] = Unicode::truncate($variables['link']['#title'], $variables['trim'], FALSE, TRUE);
   }
 
 }
