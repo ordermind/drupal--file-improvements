@@ -1,0 +1,7 @@
+{
+    "name": "drupal/file_link_improvements",
+    "type": "drupal-module--tengstrom",
+    "require": {
+        "drupal/core": "^9 || ^10"
+    }
+}

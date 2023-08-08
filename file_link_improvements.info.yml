@@ -1,0 +1,8 @@
+name: File Link Improvements
+description: Adds improvements to file links
+package: Tengström Modules
+
+type: module
+core_version_requirement: ^9 || ^10
+
+version: 0.1.0
