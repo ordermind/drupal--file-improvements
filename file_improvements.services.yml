@@ -1,0 +1,4 @@
+services:
+  # Hook handlers
+  file_improvements.hook_handlers.preprocess_file_link:
+    class: Drupal\file_improvements\HookHandlers\PreprocessHandlers\PreprocessFileLinkHandler

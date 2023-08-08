@@ -1,7 +1,8 @@
 {
-    "name": "drupal/file_link_improvements",
+    "name": "drupal/file_improvements",
     "type": "drupal-module--tengstrom",
     "require": {
-        "drupal/core": "^9 || ^10"
+        "drupal/core": "^9 || ^10",
+        "ordermind/drupal--tengstrom-shared": "dev-master"
     }
 }
