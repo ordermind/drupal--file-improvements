@@ -18,7 +18,12 @@ class PreprocessFileLinkHandler implements PreprocessHandlerInterface {
       return;
     }
 
-    $variables['link']['#title'] = Unicode::truncate($variables['link']['#title'], $variables['trim'], FALSE, TRUE);
+    $variables['link']['#title'] = Unicode::truncate(
+      $variables['link']['#title'],
+      (int) $variables['trim'],
+      FALSE,
+      TRUE
+    );
   }
 
 }
